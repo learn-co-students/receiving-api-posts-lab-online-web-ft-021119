@@ -1693,3 +1693,48 @@ Processing by ProductsController#create as */*
   [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
   [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?  [["product_id", 21]]
 Completed 201 Created in 75ms (Views: 66.6ms | ActiveRecord: 2.4ms)
+Started GET "/products/new" for 127.0.0.1 at 2019-06-10 20:27:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (869.8ms)
+Completed 200 OK in 1266ms (Views: 1248.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-06-10 20:30:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (932.8ms)
+Completed 200 OK in 1099ms (Views: 1082.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2019-06-10 20:34:15 -0400
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c1OG+MB2+hCUJ3Nlp7DufzucvoESoiRY/2GYVKGVhS4sYyJKGpbb0T+fVNfzHKiPV7+fUkl2LjZGpcSvIe2LvQ==", "product"=>{"name"=>"Product", "price"=>"3.00", "description"=>"lksvnslknv", "inventory"=>"4"}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at", "inventory", "description") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Product"], ["price", 3], ["created_at", "2019-06-11 00:34:15.760252"], ["updated_at", "2019-06-11 00:34:15.760252"], ["inventory", 4], ["description", "lksvnslknv"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 22]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (46.42ms)
+Completed 200 OK in 108ms (Views: 97.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-06-10 20:35:46 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2019-06-10 20:35:53 -0400
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pwVm3rVqAqXQf3MY5lEBN1z599+LYhymJW9Z0YmizdL4NcJsb4ojZHvHVKqy/UfHMNrWDNC2FsicqwUqCdrDQQ==", "product"=>{"name"=>"Product", "price"=>"3.00", "description"=>"khhklnlk", "inventory"=>"4"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at", "inventory", "description") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Product"], ["price", 3], ["created_at", "2019-06-11 00:35:53.396352"], ["updated_at", "2019-06-11 00:35:53.396352"], ["inventory", 4], ["description", "khhklnlk"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 23]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (4.27ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 3.2ms)
+
+
